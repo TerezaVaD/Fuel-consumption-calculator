@@ -1,0 +1,35 @@
+body{
+  font-family: "Montserrat";
+  font-weight: 900;
+  color: #45B7B8;
+  text-align: center;
+  padding-top: 10%;
+
+}
+h1{
+  font-family: "Montserrat";
+  font-weight: 900;
+}
+.btn{
+  font-family: "Montserrat";
+  font-weight: 900;
+  color: white;
+}
+.container{
+  background-image:url('10751.jpg');
+background-repeat:no-repeat;
+background-size:contain;
+background-position:center;
+}
+
+/*.container{
+  /*padding-bottom: 37.5%; /* = ( 600 / 1600 ) x 100 */
+/*  background-image: url('10751.jpg');
+
+  background-size: cover;
+  background-position: center;
+/*background-attachment: fixed;*/
+/*  background-repeat: no-repeat;
+
+}
+*/

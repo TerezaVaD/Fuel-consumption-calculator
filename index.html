@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+  <meta http-equiv=“X-UA-Compatible” content=“ie=edge”>
+
+  <title>Spotreba</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&family=Ubuntu&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <div class="container">
+    <!-- <div class=:"row"style="background-image:url('10751.jpg');></div> -->
+
+    <h1 class="form-title">Fuel consumption calculator</h1><br>
+    <div class="row mb-5 justify-content-center">
+      <label for="formGroupExampleInput" class="col-sm-12 col-lg-5 col-form-label">Distance in km</label>
+      <div class="col-lg-3 col-md-4 col-sm-5" style="background-color: secondary">
+        <input type="number" class="form-control" id="vzdalenost">
+      </div>
+    </div>
+    <div class="row mb-5 justify-content-center">
+      <label for="formGroupExampleInput2" class="col-sm-12 col-lg-5 col-form-label">Car consumption in L/100km</label>
+      <div class="col-lg-3 col-md-4 col-sm-5 align-self-center" style="background-color: secondary">
+        <input type="number" class="form-control" id="spotreba">
+      </div>
+    </div>
+    <div class="row mb-5 justify-content-center">
+      <label for="formGroupExampleInput2" class="col-sm-12 col-lg-5 col-form-label">Fuel price in CZK</label>
+      <div class="col-lg-3 col-md-4 col-sm-5" style="background-color: secondary">
+        <input type="number" class="form-control" id="cena-paliva">
+      </div>
+    </div>
+    <br>
+    <div class="row mb-4">
+      <div class="col lg-4">
+        <button onclick="calculate()" type="button" class="btn" style="margin-bottom:30%;background-color:#45B7B8;">Calculate the price</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const vzdalenostInput = document.getElementById("vzdalenost");
+    const spotrebaInput = document.getElementById("spotreba");
+    const cenaPalivaInput = document.getElementById("cena-paliva");
+
+    function calculate() {
+      const vzdalenost = parseFloat(vzdalenostInput.value);
+      const spotreba = parseFloat(spotrebaInput.value);
+      const cenaPaliva = parseFloat(cenaPalivaInput.value);
+
+      const potrebnePalivo = (vzdalenost / 100) * spotreba;
+      const cena = cenaPaliva * potrebnePalivo;
+
+      alert("Per " + vzdalenost + " km you will use fuel for " + cena + " Kc");
+    }
+  </script>
+</body>
+
+</html>
